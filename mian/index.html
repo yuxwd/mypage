@@ -22,9 +22,91 @@
     <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" />
 
 </head>
-<body>
-<h1>text</h1>
 
+<body class="mdui-theme-layout-auto mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue">
+
+    <div class="mdui-drawer mdui-drawer-close" id="main-menu">
+        <div class="mdui-list" mdui-collapse="{accordion: true}">
+            <div class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">list</i>
+                    <!-- <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">Home</div> -->
+                    <div class="mdui-list-item-content">内容</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+
+                <div class="mdui-collapse-item-body mdui-list">
+                    <a href="./index.html" class="mdui-list-item mdui-ripple">首页</a>
+                    <a href="./main/index.html" class="mdui-list-item mdui-ripple">引导访问</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mdui-container">
+
+        <!-- 设置应用栏 -->
+        <div class="mdui-appbar mdui-appbar-fixed">
+            <div class="mdui-toolbar mdui-color-theme">
+                <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white"
+                    mdui-drawer="{target: '#main-menu', swipe: true}">
+                    <i class="mdui-icon material-icons">menu</i>
+                </span>
+                <a href="javascript:;" class="mdui-typo-headline">lightearths 的网站</a>
+                <!-- <a href="javascript:;" class="mdui-typo-title">副标题</a> -->
+                <div class="mdui-toolbar-spacer"></div>
+                <!-- <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">search</i>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">refresh</i>
+            </a>
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon">
+                <i class="mdui-icon material-icons">more_vert</i>
+            </a> -->
+            </div>
+        </div>
+
+    </div>
+    <div class="mdui-appbar">
+    <div class="mdui-tab mdui-color-theme" mdui-tab>
+        <a href="#project" class="mdui-ripple mdui-ripple-white">项目</a>
+        <a href="#word" class="mdui-ripple mdui-ripple-white">文章</a>
+        <a href="#vidio" class="mdui-ripple mdui-ripple-white">视频</a>
+    </div>
+    <div class="mdui-container-fluid">
+        <div id="project">
+            <p>现在这里什么都没有哦！</p>
+        </div>
+        <div id="word">
+            <p>现在这里什么都没有哦！</p>
+        </div>
+        <div>
+            <div class="mdui-video-container">
+            <iframe
+                height="498"
+                width="510"
+                src="./img/man.mp4"
+                frameborder="0"
+                allowfullscreen
+            ></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- JavaScript 部分 -->
+    <!-- 当调用此函数时,会打开一个新标签页,参数是 `url` -->
+    <script>
+        function openNewTab(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+
+    <!-- 引入 MDUI JS 文件 -->
+    <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script>
 
 </body>
+
 </html>
